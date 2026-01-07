@@ -1,10 +1,81 @@
 <!DOCTYPE html>
 <html>
-  <title>RUN</title>
-   <body>
-    <h1>Hi!! Welcome to RUN Universe, I'm ashiqrun</h1>
-    <img src="photos/myphoto.jpg" alt="It's ashiqrun" width="600" height="800">
-    <h3> Contact me via <button><a href="https://www.instagram.com/ashiqrun">Instagram</a> </h3></button> 
-    <audio autoplay loop src="photos/afsos.mp3"></audio>
-   </body>
+<head>
+    <title>RUN</title>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #121212;
+            color: white; 
+            text-align: center; 
+            font-family: 'Permanent Marker'; cursive; 
+            margin-top: 50px;
+        }
+
+        .my-photo {
+            width: 300px; 
+            border-radius: 25px; 
+            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1); 
+            margin-bottom: 20px;
+        }
+
+        .insta-btn {
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888, #8a3ab9);
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            display: inline-block;
+            transition: transform 0.2s;
+        }
+        
+        .insta-btn:hover {
+            transform: scale(1.05); 
+        }
+
+        .music-msg {
+            background-color: #2ea043;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 8px;
+            display: inline-block;
+            cursor: pointer;
+            margin-bottom: 20px;
+            font-size: 14px;
+            animation: bounce 2s infinite; 
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+            40% {transform: translateY(-10px);}
+            60% {transform: translateY(-5px);}
+        }
+    </style>
+</head>
+<body>
+
+    <audio id="bgMusic" loop src="photos/afsos.mp3"></audio>
+
+    <div class="music-msg" onclick="playMusic()">
+        🎵 Click here to play BGM
+    </div>
+
+    <h1>Hi!! Welcome to Run universe <br> I'm Ashiq Run</h1>
+
+    <img class="my-photo" src="photos/myphoto.jpg" alt="It's ashiqrun">
+
+    <h3>
+        <a class="insta-btn" href="https://www.instagram.com/ashiqrun">Follow me on Instagram</a>
+    </h3>
+
+    <script>
+        function playMusic() {
+            var audio = document.getElementById("bgMusic");
+            audio.play();
+            document.querySelector('.music-msg').style.display = 'none';
+        }
+    </script>
+
+</body>
 </html>
