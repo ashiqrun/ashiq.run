@@ -3,6 +3,7 @@
 <head>
     <title>RUN</title>
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body {
             background-color: #121212;
@@ -13,7 +14,9 @@
         }
 
         .my-photo {
-            width: 300px; 
+            width: 90%; 
+            max-width: 350px;
+            height: auto;
             border-radius: 25px; 
             box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1); 
             margin-bottom: 20px;
@@ -29,6 +32,16 @@
             display: inline-block;
             transition: transform 0.2s;
         }
+        .github-btn {
+            background: #24292e; 
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            display: inline-block;
+            transition: transform 0.2s;
+            }    
         
         .insta-btn:hover {
             transform: scale(1.05); 
@@ -58,7 +71,7 @@
     <audio id="bgMusic" loop src="photos/afsos.mp3"></audio>
 
     <div class="music-msg" onclick="playMusic()">
-        🎵 Click here to play BGM
+        🎵 Click here to play music 🎵
     </div>
 
     <h1>Hi!! Welcome to Run universe <br> I'm Ashiq Run</h1>
@@ -66,7 +79,8 @@
     <img class="my-photo" src="photos/myphoto.jpg" alt="It's ashiqrun">
 
     <h3>
-        <a class="insta-btn" href="https://www.instagram.com/ashiqrun">Follow me on Instagram</a>
+        <a class="insta-btn" href="https://www.instagram.com/ashiqrun">Follow me on Instagram</a> <br><br>
+        <a class="btn github-btn" href="https://github.com/ashiqrun">Follow me on GitHub</a>
     </h3>
 
     <script>
